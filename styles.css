@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    margin:10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    padding-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(11, 0, 0);
+    font-weight: bold;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    margin: 5%;
+    background-image: url('hero background.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.hero h2, .hero p {
+    margin: 0 0 10px;
+}
+.hero button {
+    padding: 10px 20px;
+    background-color: #05010484;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.hero button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.story-header {
+    padding: 0px 70px;
+    text-align: left;
+}
+
+.story-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.story-header h3 {
+    font-size: 1.5em;
+    color: #555;
+}
+
+.story {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    gap: 20px;
+}
+
+.card {
+    margin: 5%;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 48%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.meet-team {
+    margin: 5%;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.meet-team h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 25%;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-card h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Hover Effect */
+.team-card:hover {
+    background-color: #007bff00;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    background-image: url('home\ footer.jpeg'); /* Replace with the garden background image */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: rgb(15, 1, 1);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer .address, .footer .contact {
+    width: 48%; /* Each section will take up 48% of the space */
+    margin-bottom: 20px;
+}
+
+.footer h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.footer a {
+    color: #0b0901; /* Highlighted email link color */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .story {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .team-card {
+        width: 45%;
+    }
+
+    .footer .address, .footer .contact {
+        width: 100%; /* Stacks the sections on smaller screens */
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
