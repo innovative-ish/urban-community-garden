@@ -19,16 +19,16 @@
         </nav>
     </header>
 
-    <section>
-        <br>
-        <h2>Support Our Garden</h2>
-        <p>Your donation helps us maintain and grow our community garden</p>
-        <br>
-    </section>
+    <div class = "story-header">
+        <p>
+            <h1>Support Our Garden</h1>
+            <h3>Your donation helps us maintain and grow our community garden</h3>
+        </p\>
+    </div>
     
     <main class="container">
         <section class="donation-options">
-            <h2>Choose a Donation Category</h2>
+            <h2>Choose your Impact</h2>
             <div class="donation-card" onclick="selectDonation(25)">
                 <h3><span>Seed</span> <span>$25</span></h3>
                 <p>Help us buy seeds and basic supplies</p>
@@ -48,7 +48,7 @@
         </section>
 
         <section class="donation-form">
-            <h2>Make a Donation</h2>
+            <h2>Donation Details</h2>
             <form id="donationForm" onsubmit="submitForm(event)">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>

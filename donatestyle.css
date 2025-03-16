@@ -20,6 +20,7 @@ header h1 {
     font-weight: bold;
     margin: 0;
     padding-left: 20px;
+    color: #395c3a;
 }
 
 nav ul {
@@ -41,33 +42,48 @@ nav ul li a {
     font-weight: bold;
 }
 
+.story-header {
+    padding: 0px 70px;
+    text-align: left;
+}
+
+.story-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.story-header h3 {
+    font-size: 1.5em;
+    color: #555;
+    margin-left: 100px;
+}
 .container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     max-width: 900px;
     margin: auto;
-    gap: 20px;
+    gap: 60px;
 }
 
 /* Donation Options */
 .donation-options {
-    width: 45%;
     flex: 1;
 }
 
 .donation-options h2 {
-    text-align: center;
+    margin: 10px;
     color: #333;
 }
 
 .donation-card {
     background-color: rgba(255, 255, 255, 0);
     justify-content: space-between;
-    align-items: center;
     border: 1px solid #000000;
     padding: 15px;
-    margin: 10px 0;
+    margin: 10px 10px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -86,6 +102,7 @@ nav ul li a {
 
 /* Donation Form */
 .donation-form {
+    margin: 20px;
     flex: 1;
     border: 2px solid #000000;
     padding: 20px;
