@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
+    <title>Events | Urban Community Garden</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Community Garden Events</h1>
+        <h1>Urban Community Garden</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
                 <li><a href="volunteer.html">Volunteer</a></li>
                 <li><a href="donate.html">Donate</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -19,19 +20,45 @@
         </nav>
     </header>
     
-    <section>
-        <h2>Upcoming Events</h2>
-        <p>Check out our calendar to see what’s happening next!</p>
-        <input type="date" id="eventDate" name="eventDate">
+    <section class="events">
+        <div class="container">
+            <h1>Events</h1>
+            <p>Join us for upcoming events or check out our past gatherings</p>
+            
+            <div class="events-wrapper">
+                <div class="upcoming-events">
+                    <h2>Upcoming Events</h2>
+                    
+                    <div class="event-card">
+                        <h3>Spring Planting Day</h3>
+                        <p>Join us for our annual spring planting event!</p>
+                        <p><strong>Date:</strong> April 14th, 2024</p>
+                        <p><strong>Location:</strong> Community Garden - Main Area</p>
+                    </div>
+                    
+                    <div class="event-card">
+                        <h3>Garden Workshop</h3>
+                        <p>Learn about organic gardening techniques</p>
+                        <p><strong>Date:</strong> March 19th, 2024</p>
+                        <p><strong>Location:</strong> Community Garden - Education Center</p>
+                    </div>
+                </div>
+                
+                <div class="calendar">
+                    <h2>Calendar</h2>
+                    <div class="calendar-widget">
+                        <!-- Placeholder for calendar -->
+                        <iframe src="https://calendar.google.com/calendar/embed?src=yourcalendarurl" 
+                                style="border: 0" width="300" height="300" frameborder="0" scrolling="no">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Past Events</h2>
+            <!-- Placeholder for past events list -->
+        </div>
     </section>
     
-    <section>
-        <h2>Past Events</h2>
-        <p>See what we’ve accomplished in the past.</p>
-        <ul>
-            <li>Spring Planting Festival - April 2024</li>
-            <li>Harvest Celebration - October 2023</li>
-        </ul>
-    </section>
 </body>
 </html>

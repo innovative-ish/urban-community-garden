@@ -3,34 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer</title>
+    <title>Volunteer | Urban Community Garden</title>
     <link rel="stylesheet" href="vstyles.css">
 </head>
 <body>
     <header>
-        <h1>Volunteer With Us</h1>
+        <h1>Urban Community Garden</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="donate.html">Donate</a></li>
                 <li><a href="events.html">Events</a></li>
+                <li><a href="volunteer.html" class="active">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h2>Get Involved</h2>
-        <p>Help us by taking part in gardening, event organization, and community engagement.</p>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <button type="submit">Join Us</button>
-        </form>
-    </section>
+    <div class = story-header> 
+        <p>
+            <h1>Volunteer With Us</h1>
+            <h3>Join our community of dedicated gardeners and make a difference.</h3>
+        </p>
+    </div>
+
+    <main>
+        <section class="volunteer-container">
+            <div class="volunteer-content">
+                <div class="why-volunteer">
+                    <h3>Why Volunteer?</h3>
+                    <ul>
+                        <li>Learn about sustainable gardening practices</li>
+                        <li>Connect with like-minded community members</li>
+                        <li>Contribute to local food production</li>
+                        <li>Enjoy the therapeutic benefits of gardening</li>
+                    </ul>
+                </div>
+
+                <div class="volunteer-form">
+                    <h3>Volunteer Registration</h3>
+                    <form id="volunteerForm">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" id="phone" name="phone">
+
+                        <br>
+
+                        <label>Availability</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="weekday-mornings" name="availability[]" value="Weekday Mornings">
+                            <label for="weekday-mornings">Weekday Mornings</label>
+
+                            <input type="checkbox" id="weekday-afternoons" name="availability[]" value="Weekday Afternoons">
+                            <label for="weekday-afternoons">Weekday Afternoons</label>
+
+                            <input type="checkbox" id="weekend-mornings" name="availability[]" value="Weekend Mornings">
+                            <label for="weekend-mornings">Weekend Mornings</label>
+
+                            <input type="checkbox" id="weekend-afternoons" name="availability[]" value="Weekend Afternoons">
+                            <label for="weekend-afternoons">Weekend Afternoons</label>
+                        </div>
+
+                        <br>
+
+                        <label>Areas of Interest</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="planting" name="interest[]" value="Planting">
+                            <label for="planting">Planting</label>
+
+                            <input type="checkbox" id="maintenance" name="interest[]" value="Garden Maintenance">
+                            <label for="maintenance">Garden Maintenance</label>
+
+                            <input type="checkbox" id="education" name="interest[]" value="Educational Programs">
+                            <label for="education">Educational Programs</label>
+
+                            <input type="checkbox" id="event-organization" name="interest[]" value="Event Organization">
+                            <label for="event-organization">Event Organization</label>
+                        </div>
+
+                        <br>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Thank you for signing up as a volunteer! We will reach out to you soon.</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("volunteerForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            document.getElementById("popup").style.display = "flex"; // Show popup
+            this.reset(); // Reset form fields
+        });
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+
 </body>
 </html>

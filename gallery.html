@@ -3,33 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gallery | Urban Community Garden</title>
+    <link rel="stylesheet" href="gstyles.css">
 </head>
 <body>
     <header>
-        <h1>Community Garden Gallery</h1>
+        <h1>Urban Community Garden</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
                 <li><a href="volunteer.html">Volunteer</a></li>
                 <li><a href="donate.html">Donate</a></li>
-                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
             </ul>
         </nav>
     </header>
     
     <section>
+        <br>
         <h1>Our Memories</h1>
         <div class="gallery">
-            <img src="m1.jpeg" alt="Garden Event 1">
-            <img src="m3.jpeg" alt="Garden Event 3">
-            <img src="m7.jpeg" alt="Garden Event 7"><br>
-            <img src="m4.jpeg" alt="Garden Event 4">
-            <img src="m5.jpeg" alt="Garden Event 5">
-            <img src="m6.jpeg" alt="Garden Event 6"><br>            
-            <img src="m2.jpg" alt="Garden Event 2">
+            <div class="gallery-card">
+                <img src="m1.jpeg" alt="Garden Event 1">
+                <div class="like-section">
+                    <button class="like-btn">❤️</button>
+                    <span class="like-count">0</span> Likes
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="m2.jpg" alt="Garden Event 1">
+                <div class="like-section">
+                    <button class="like-btn">❤️</button>
+                    <span class="like-count">0</span> Likes
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="m3.jpeg" alt="Garden Event 1">
+                <div class="like-section">
+                    <button class="like-btn">❤️</button>
+                    <span class="like-count">0</span> Likes
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="m4.jpeg" alt="Garden Event 1">
+                <div class="like-section">
+                    <button class="like-btn">❤️</button>
+                    <span class="like-count">0</span> Likes
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="m5.jpeg" alt="Garden Event 1">
+                <div class="like-section">
+                    <button class="like-btn">❤️</button>
+                    <span class="like-count">0</span> Likes
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="m6.jpeg" alt="Garden Event 1">
+                <div class="like-section">
+                    <button class="like-btn">❤️</button>
+                    <span class="like-count">0</span> Likes
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="m7.jpeg" alt="Garden Event 1">
+                <div class="like-section">
+                    <button class="like-btn">❤️</button>
+                    <span class="like-count">0</span> Likes
+                </div>
+            </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const likeButtons = document.querySelectorAll(".like-btn");
+
+            likeButtons.forEach((button) => {
+                const card = button.closest(".gallery-card");
+                const imgSrc = card.querySelector("img").src;
+                const likeCountElement = card.querySelector(".like-count");
+
+                // Retrieve saved likes from localStorage
+                let savedLikes = localStorage.getItem(imgSrc);
+                if (savedLikes) {
+                    savedLikes = parseInt(savedLikes);
+                    likeCountElement.textContent = savedLikes;
+                } else {
+                    likeCountElement.textContent = 0;
+                }
+
+                // Check if liked
+                if (localStorage.getItem(imgSrc + "-liked") === "true") {
+                    button.classList.add("liked");
+                }
+
+                // Click event for liking
+                button.addEventListener("click", function () {
+                    let currentLikes = parseInt(likeCountElement.textContent);
+                    
+                    if (button.classList.contains("liked")) {
+                        button.classList.remove("liked");
+                        currentLikes -= 1;
+                        localStorage.setItem(imgSrc + "-liked", "false");
+                    } else {
+                        button.classList.add("liked");
+                        currentLikes += 1;
+                        localStorage.setItem(imgSrc + "-liked", "true");
+                    }
+
+                    likeCountElement.textContent = currentLikes;
+                    localStorage.setItem(imgSrc, currentLikes); // Save likes
+                });
+            });
+        });
+    </script>
 </body>
 </html>
